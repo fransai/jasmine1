@@ -1,8 +1,11 @@
-function addition(numeOne, numeTwo) {
-    if(typeof(numeOne) == "number" && typeof(numeTwo) == "number") {
-        return numeOne + numeTwo;
-    }
-    else {
+Calculator = function() {
+    this.value = 0;
+};
+
+Calculator.prototype.add = function(number) {
+    if (typeof(number) == "number") {
+        this.value += number;
+    } else {
         alert("Error!");
-    }  
-}
+    }
+};
